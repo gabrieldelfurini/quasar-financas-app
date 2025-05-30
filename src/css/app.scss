@@ -1,1 +1,57 @@
-// app global css in SCSS form
+// global
+.letter-spacing-none {
+  letter-spacing: 0;
+}
+
+// dark overrides
+.body--dark {
+  .bg-primary, .q-layout__section--marginal {
+    background-color: $primary-dark !important;
+  }
+  .q-drawer {
+    border: none;
+  }
+}
+
+// drawer nav
+.q-drawer {
+  .q-item {
+    opacity: 0.6;
+    &.q-router-link--exact-active {
+      opacity: 1;
+    }
+  }
+}
+
+// Number Inputs
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  margin-left: 10px;
+}
+
+// q-popup-edit__buttons
+.q-popup-edit__buttons {
+  .q-btn {
+    text-transform: none;
+  }
+} 
+
+//entries
+.entries {
+  .q-slide-item {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    .body--dark & {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    &:not(:first-child) {
+      margin-top: -1px;
+    }
+  }
+  .sortable-ghost {
+    opacity: 0;
+  }
+  .running-balance {
+    right: -4px;
+    bottom: -5px;
+  }
+}
