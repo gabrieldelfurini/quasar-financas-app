@@ -7,6 +7,7 @@
   import { useRouter } from 'vue-router'
   import { useStoreSettings } from './stores/SettingsStore';
   import { useStoreEntries } from './stores/EntriesStore';
+  import { useQuasar } from 'quasar'
 
   defineOptions({
     name: 'App'
@@ -14,15 +15,18 @@
 
   const storeSettings = useStoreSettings(),
         storeEntries = useStoreEntries(),
-        router = useRouter()
+        router = useRouter(),
+        $q = useQuasar()
 
   onMounted(() => {
     storeSettings.loadSettings()
     storeEntries.loadEntries()
 
-    ipcRenderer.on('show-settings', () => {
-      router.push('/settings')
-    })
+    if ($q.platform.is.electron) {
+      ipcRenderer.on('show-settings', () => {
+        router.push('/settings')
+      })
+    }
   })
 
 

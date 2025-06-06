@@ -1,6 +1,6 @@
 // imports
 
-  import { app, BrowserWindow, Menu } from 'electron'
+  import { app, BrowserWindow, Menu, ipcMain } from 'electron'
   import path from 'node:path'
   import os from 'node:os'
   import { fileURLToPath } from 'node:url'
@@ -64,8 +64,15 @@
 
 // app events
 
-app.on('window-all-closed', () => {
-  // if (platform !== 'darwin') {
+  app.on('window-all-closed', () => {
+    // if (platform !== 'darwin') {
+      app.quit()
+    // }
+  })
+
+
+// ipc events
+
+  ipcMain.on('quit-app', () => {
     app.quit()
-  // }
-})
+  })

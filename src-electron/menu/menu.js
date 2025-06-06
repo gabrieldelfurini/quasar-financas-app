@@ -12,6 +12,7 @@
           { role: 'about' },
           {
             label: 'Settings',
+            accelerator: 'Ctrl+s',
             click() {
               mainWindow.webContents.send('show-settings')
             }

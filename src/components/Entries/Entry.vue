@@ -163,7 +163,7 @@
   }
 
   const promptToDelete = reset => {
-        $q.dialog({
+    $q.dialog({
       title: 'Delete Entry',
       message: `
         Delete this entry?
@@ -188,7 +188,6 @@
     }).onCancel(() => {
       reset()
     })
-
   }
 
   //Name & Amount Udapte
