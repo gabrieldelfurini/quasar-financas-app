@@ -5,30 +5,30 @@ import { uid, Notify, LocalStorage } from "quasar";
 export const useStoreEntries = defineStore('entries', () => {
   // state
     const entries = ref([
-      {
-        id: "id0",
-        amount: 4999.9,
-        name: "Salary",
-        paid: false
-      },
-      {
-        id: "id1",
-        amount: -999,
-        name: "Rentasa",
-        paid: false
-      },
-      {
-        id: "id2",
-        amount: -14.99,
-        name: "Phone",
-        paid: false
-      },
-      {
-        id: "id3",
-        amount: 0,
-        name: "Unknown",
-        paid: false
-      },
+      // {
+      //   id: "id0",
+      //   amount: 4999.9,
+      //   name: "Salary",
+      //   paid: false
+      // },
+      // {
+      //   id: "id1",
+      //   amount: -999,
+      //   name: "Rentasa",
+      //   paid: false
+      // },
+      // {
+      //   id: "id2",
+      //   amount: -14.99,
+      //   name: "Phone",
+      //   paid: false
+      // },
+      // {
+      //   id: "id3",
+      //   amount: 0,
+      //   name: "Unknown",
+      //   paid: false
+      // },
     ]);
 
     watch(entries.value, () => {

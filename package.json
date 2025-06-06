@@ -9,6 +9,7 @@
   "scripts": {
     "icons": "icongenie generate -i app-icon.png --skip-trim",
     "dev": "quasar dev",
+    "dev:mac": "quasar dev -m electron",
     "build": "quasar build",
     "postinstall": "quasar prepare"
   },
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@quasar/app-vite": "^2.1.0",
     "autoprefixer": "^10.4.2",
+    "electron": "^36.3.2",
     "postcss": "^8.4.14"
   },
   "engines": {
